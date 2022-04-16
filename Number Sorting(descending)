@@ -1,0 +1,40 @@
+#include <stdio.h>
+
+void main()
+{
+    int arr1[100];
+    int n, i, j, tmp;
+	
+	
+       printf("\n\nNumber Sorting in descending order :\n");
+       printf("----------------------------------------------\n");	
+
+    printf("Array Size : ");
+    scanf("%d", &n);
+
+       printf("Input %d Array Size :\n",n);
+       for(i=0;i<n;i++)
+            {
+	      printf("Input number : %d : ",i);
+	      scanf("%d",&arr1[i]);
+	    }
+    for(i=0; i<n; i++)
+    {
+        for(j=i+1; j<n; j++)
+        {
+            if(arr1[i] < arr1[j])
+            {
+                tmp = arr1[i];
+                arr1[i] = arr1[j];
+                arr1[j] = tmp;
+            }
+        }
+    }
+
+     printf("\nSorted List:\n");
+    for(i=0; i<n; i++)
+    {
+        printf("%d  ", arr1[i]);
+    }
+	        printf("\n\n");
+}
